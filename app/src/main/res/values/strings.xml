@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Sky Sports</string>
+    <string name="para_text0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="para_text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="sample_teaser_text">Lorem ipsum dolor</string>
+</resources>
