@@ -1,4 +1,4 @@
-# News App
+# Sky Sports News App
 
 # Getting Started
 - The application has a MVVM design pattern.
@@ -13,6 +13,3 @@
 - Attempt was made to improve this further by implementing polymorphic serialization. 
 - However, due to the ambiguity issues between the gradle build dependencies which will take time to resolve, current approach was implemented. 
 - Strongly recommend to refer com.example.master.repository.model.DataClass which consists of the polymorphic serialization approach for existing model classes. 
-
-# Test class
-- Test cases are added for viewmodels and json response serialized to model objects 
