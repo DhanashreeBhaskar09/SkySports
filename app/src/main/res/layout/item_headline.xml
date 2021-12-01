@@ -6,56 +6,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/activity_margin_quarter">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/item_news_headline_parent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/light_grey"
-            android:clickable="true"
-            android:padding="@dimen/activity_margin_quarter"
-            android:visibility="gone"
-            app:cardCornerRadius="@dimen/view_radius"
-            app:cardPreventCornerOverlap="false"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:visibility="gone">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/light_grey">
-
-                <TextView
-                    android:id="@+id/item_story_title"
-                    style="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="none"
-                    android:maxLines="3"
-                    android:padding="@dimen/activity_margin_half"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="parent"
-                    tools:text="@string/para_text0" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+        android:layout_marginTop="@dimen/activity_margin_quarter">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/item_video_headline_parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            android:padding="@dimen/activity_margin_quarter"
             android:visibility="gone"
             app:cardCornerRadius="@dimen/view_radius"
-            app:cardPreventCornerOverlap="false"
-            app:cardUseCompatPadding="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -66,19 +24,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/light_grey"
-                android:padding="@dimen/activity_margin_half"
-                android:visibility="visible"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:visibility="visible">
 
                 <ImageView
                     android:id="@+id/item_headline_image"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:adjustViewBounds="true"
-                    android:paddingRight="@dimen/activity_margin_half"
                     android:scaleType="fitXY"
                     android:src="@drawable/ic_launcher_background"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -98,9 +50,9 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintWidth_percent="0.7">
 
+                    <!--style="@style/story_headline"-->
                     <TextView
                         android:id="@+id/item_video_title"
-                        style="@style/TextAppearance.AppCompat.Medium"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:ellipsize="none"
@@ -117,8 +69,6 @@
             android:id="@+id/item_hero_story_parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/darker_gray"
-            android:padding="@dimen/activity_margin_half"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -135,15 +85,13 @@
                 app:layout_constrainedHeight="true"
                 tools:visibility="visible" />
 
-            <!--android:text="@{content.text}"-->
-
-
+            <!--style="@style/hero_headline"-->
             <TextView
                 android:id="@+id/item_hero_story_title"
-                style="@style/TextAppearance.AppCompat.Large"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
+                android:background="@color/sun_yellow"
                 android:ellipsize="none"
                 android:gravity="left"
                 android:paddingLeft="@dimen/activity_margin_half"

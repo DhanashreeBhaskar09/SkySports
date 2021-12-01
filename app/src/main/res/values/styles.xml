@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="story_headline">
+        <item name="android:textSize">@dimen/story_text_size</item>
+        <item name="android:fontFamily">@font/sky_regular</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="hero_headline" parent="story_headline">
+        <item name="android:textSize">@dimen/hero_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

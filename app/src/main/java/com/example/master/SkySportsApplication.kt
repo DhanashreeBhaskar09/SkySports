@@ -7,7 +7,7 @@ import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext
 import org.koin.core.context.startKoin
 
-class MasterApplication : Application() {
+class SkySportsApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         setupApplication()
@@ -18,7 +18,7 @@ class MasterApplication : Application() {
         if (GlobalContext.getOrNull() == null) {
             startKoin {
                 androidLogger()
-                androidContext(this@MasterApplication)
+                androidContext(this@SkySportsApplication)
                 modules(listOf(viewModelModules))
             }
         }

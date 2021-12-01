@@ -3,13 +3,13 @@
     package="com.example.master">
 
     <application
-        android:name="com.example.master.MasterApplication"
+        android:name="com.example.master.SkySportsApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Master">
+        android:theme="@style/Theme.SkySportsApplication.NoActionBar">
 
         <uses-library
             android:name="android.test.runner"

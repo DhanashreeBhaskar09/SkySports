@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:baselineAligned="false"
+    android:contentDescription="@null"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toTopOf="@+id/headlines_list"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_percent="0.08"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <RelativeLayout
+        android:id="@+id/headerBlueBox"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/toolbar_blue"
+        android:importantForAccessibility="no">
+
+        <ImageView
+            android:id="@+id/headerSkyText"
+            android:paddingTop="@dimen/activity_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:importantForAccessibility="no"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_sky_logo" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/headerRedBox"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/colorSkyRed">
+
+        <ImageView
+            android:id="@+id/headerSportsText"
+            android:paddingTop="@dimen/activity_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:importantForAccessibility="no"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_sports_logo" />
+
+    </RelativeLayout>
+
+</LinearLayout>

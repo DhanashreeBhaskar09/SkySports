@@ -10,7 +10,7 @@ import io.reactivex.rxkotlin.addTo
 import io.reactivex.subjects.BehaviorSubject
 import java.io.IOException
 
-class NewsViewModel(applicationContext: Context): BaseViewModel<NewsViewModel>() {
+class NewsViewModel(applicationContext: Context) : BaseViewModel<NewsViewModel>() {
 
     private val currentState = BehaviorSubject.createDefault(ScreenState.LOADING_IN_PROGRESS)
     private val context = applicationContext
@@ -35,11 +35,26 @@ class NewsViewModel(applicationContext: Context): BaseViewModel<NewsViewModel>()
         headLines.onNext(fetchNewsData())
     }
 
-    private fun fetchNewsData() : List<Story> {
+    private fun fetchNewsData(): List<Story> {
         val storyList = mutableListOf<Story>()
-        fetchJsonData().modules.iterator().forEach {
-                news -> news.data.items.forEach {
-                    story -> storyList.add(Story(id = story.id, type = story.type, headline = story.headline))
+        fetchJsonData().modules.iterator().forEach { news ->
+            news.data.items.forEach { story ->
+                run {
+                    val url =
+                        "https://e0.365dm.com/" + story.media[0].links.fileReference.replace(
+                            "{width}",
+                            "768"
+                        ).replace("{height}", "432")
+                    storyList.add(
+                        Story(
+                            id = story.id,
+                            type = story.type,
+                            headline = story.headline,
+                            media = story.media,
+                            imageUrl = url
+                        )
+                    )
+                }
             }
         }
         val finalList = mutableListOf<Story>()
@@ -48,7 +63,7 @@ class NewsViewModel(applicationContext: Context): BaseViewModel<NewsViewModel>()
         return finalList
     }
 
-    private fun fetchJsonData() : NewsModule {
+    private fun fetchJsonData(): NewsModule {
         lateinit var jsonString: String
         try {
             jsonString = context.assets.open("top-stories.json")
@@ -59,6 +74,11 @@ class NewsViewModel(applicationContext: Context): BaseViewModel<NewsViewModel>()
             ioException.printStackTrace()
         }
         return Gson().fromJson(jsonString, NewsModule::class.java)
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        bag.dispose()
     }
 
     fun setLoadingComplete() {
