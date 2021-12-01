@@ -23,7 +23,7 @@ Dependency Injection technique is added by which an object receives other object
 
 The `data` layer is responsible for fetching and preparing news articles from a data source (a local asset file in this case). The `UI` layer on the other hand is responsible for rendering the news articles loaded by the `data` layer onto the screen.
 
-The UI layer is written in xmls and uses DataBinding while fetching, preparing the data from source. 
+The UI is written using xml and uses DataBinding while fetching, preparing the data from source. 
 
 The data layer is also written using Coroutines, which is a new framework of libraries for writing asynchronous code in a "synchronous" fashion in Kotlin, eliminating the need for the classic callbacks in most cases.
 More on Kotlin Coroutines from [here](https://kotlinlang.org/docs/coroutines-overview.html)
