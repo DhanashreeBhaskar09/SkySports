@@ -19,11 +19,11 @@ More on MVVM and recommended android app architectures [here](https://developer.
 
 The project has ViewModel class design to  manage UI-related data in a lifecycle conscious way. More on Kotlin ViewModel from [here](https://developer.android.com/topic/libraries/architecture/viewmodel)
 
-Dependency Injection technique is added by which an object receives other objects that it depends on. More on Kotlin ViewModel from [here](https://developer.android.com/training/dependency-injection)
+Dependency Injection technique is added by which an object receives other objects that it depends on. More on Kotlin DI from [here](https://developer.android.com/training/dependency-injection)
 
 The `data` layer is responsible for fetching and preparing news articles from a data source (a local asset file in this case). The `UI` layer on the other hand is responsible for rendering the news articles loaded by the `data` layer onto the screen.
 
-The UI is written using xml and uses DataBinding while fetching, preparing the data from source. 
+The UI is written using xml and uses DataBinding to bind the UI widgets with the data sources. More on Kotlin DataBinding from [here](https://developer.android.com/topic/libraries/data-binding) 
 
 The data layer is also written using Coroutines, which is a new framework of libraries for writing asynchronous code in a "synchronous" fashion in Kotlin, eliminating the need for the classic callbacks in most cases.
 More on Kotlin Coroutines from [here](https://kotlinlang.org/docs/coroutines-overview.html)
